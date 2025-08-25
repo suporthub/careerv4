@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-slate-900 text-gray-200 antialiased;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+  }
+  .bg-constellation-pattern {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80"><circle fill="%23ffffff" cx="40" cy="40" r="1.5" opacity="0.1"></circle><circle fill="%23ffffff" cx="10" cy="10" r="1" opacity="0.1"></circle><circle fill="%23ffffff" cx="70" cy="70" r="1" opacity="0.1"></circle><circle fill="%23ffffff" cx="10" cy="70" r="0.5" opacity="0.1"></circle><circle fill="%23ffffff" cx="70" cy="10" r="0.5" opacity="0.1"></circle></svg>');
+    animation: background-pan 30s linear infinite;
+  }
+}
+
+@keyframes background-pan {
+  from { background-position: 0 0; }
+  to { background-position: -160px -160px; }
+}
+
+.glow-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0) 50%);
+  animation: glow-animation 10s infinite linear;
+  transform-origin: center center;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes glow-animation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
