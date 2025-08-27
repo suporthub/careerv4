@@ -199,7 +199,7 @@ const RegistrationForm: React.FC = () => {
                     )}
                   </button>
                   <p className="mt-4 text-sm text-gray-500 text-center">
-                    By submitting this form, you agree to our terms and privacy policy.
+                    🔒 Your information is secure. We only contact shortlisted candidates
                   </p>
                 </div>
               </form>

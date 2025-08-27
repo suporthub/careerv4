@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import mentorImage from '../images/mentor promise-2.PNG';
 import aboutImage from '../images/recognised.png';
+import brochurePDF from '../images/DAwithAI_compressed.pdf';
 
 const successStories = [
   {
@@ -80,6 +81,14 @@ const LandingPage: React.FC = () => {
                 <span className="relative">Book Free Interview</span>
                 <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
+              <a 
+                href={brochurePDF}
+                download="DAwithAI_compressed.pdf"
+                className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-purple-600 text-white font-bold rounded-full transition-all duration-300 text-lg overflow-hidden"
+              >
+                <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                <span className="relative">Download Brochure</span>
+              </a>
               <div className="flex items-center space-x-4 text-purple-400 mt-4 sm:mt-0">
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2" />
@@ -116,7 +125,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* What You'll Learn */}
-      <section id="curriculum" className="py-20 bg-slate-900">
+            <section id="curriculum" className="py-12 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -190,7 +199,7 @@ const LandingPage: React.FC = () => {
                   </Link>
             </section>
       {/* Mentor's Promise Section */}
-      <section id="mentor" className="py-20 bg-slate-900/70 bg-constellation-pattern">
+            <section id="mentor" className="py-12 bg-slate-900/70 bg-constellation-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             <motion.div
@@ -203,7 +212,7 @@ const LandingPage: React.FC = () => {
               <img 
                 src={mentorImage}
                 alt="Shivam Yadav, Mentor at Career Redefine"
-                className="rounded-full w-64 h-64 mx-auto lg:w-full lg:h-auto lg:rounded-2xl shadow-2xl shadow-blue-500/10 border-4 border-slate-700"
+                className="rounded-full w-80 h-80 mx-auto sm:w-96 sm:h-96 lg:w-full lg:h-auto lg:rounded-2xl shadow-2xl shadow-blue-500/10 border-4 border-slate-700"
               />
             </motion.div>
             <motion.div
@@ -222,8 +231,8 @@ const LandingPage: React.FC = () => {
                 </blockquote>
                 <div className="bg-slate-700/50 border border-slate-600 rounded-lg p-4">
                   <h3 className="text-xl font-bold text-white">Shivam Yadav</h3>
-                  <p className="text-blue-300">AI-ML Instructor-Mentor | x-DataScience Instructor</p>
-                  <p className="text-gray-400">@Scaler | IIT Kanpur</p>
+                  <p className="text-blue-300">AI-ML Instructor-Mentor </p>
+                  <p className="text-gray-400">x-DataScience Instructor@Scaler | IIT Kanpur</p>
                 </div>
               </div>
             </motion.div>
@@ -233,7 +242,7 @@ const LandingPage: React.FC = () => {
       
 
       {/* What Happens Next */}
-      <section className="py-16 bg-slate-900">
+            <section className="py-12 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -290,10 +299,32 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
+            <section className="py-6 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <Link 
+              to="/register"
+              className="group relative inline-flex items-center justify-center px-8 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-full transition-all duration-300 text-base overflow-hidden"
+            >
+              <span className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              <span className="absolute w-full h-full bg-white/20 -left-full top-0 -rotate-45 group-hover:left-full transition-all duration-500"></span>
+              <span className="relative">Apply Now & Secure Your Spot</span>
+              <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <p className="mt-4 text-gray-400">Join the next batch of career transformers.</p>
+          </motion.div>
+        </div>
+      </section>
         
       {/* About Career Redefine */}
       {/* About Career Redefine */}
-      <section id="about" className="py-20 bg-slate-900">
+            <section id="about" className="py-12 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -400,29 +431,6 @@ const LandingPage: React.FC = () => {
 
 
 
-      {/* Final CTA */}
-      <section className="py-20 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Link 
-              to="/register"
-              className="group relative inline-flex items-center justify-center px-8 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-full transition-all duration-300 text-base overflow-hidden"
-            >
-              <span className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-              <span className="absolute w-full h-full bg-white/20 -left-full top-0 -rotate-45 group-hover:left-full transition-all duration-500"></span>
-              <span className="relative">Apply Now & Secure Your Spot</span>
-              <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <p className="mt-4 text-gray-400">Join the next batch of career transformers.</p>
-          </motion.div>
-        </div>
-      </section>
 
       <Footer />
     </div>
