@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import AdminHeader from './AdminHeader';
+import { supabase } from '../../lib/supabaseClient';
 
 const AdminLayout: React.FC = () => {
   const navigate = useNavigate();
