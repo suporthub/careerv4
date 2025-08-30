@@ -59,7 +59,7 @@ const LandingPage: React.FC = () => {
                 Transform your career journey →
               </span>
               <h1 className="text-4xl lg:text-6xl font-bold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-br from-white to-gray-400">
-                Master AI-Powered Data Analytics
+                Master AI-Powered Data Science
               </h1>
               <p className="text-xl lg:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto">
                 Go beyond dashboards. Become an AI-first data professional who drives strategy and solves complex business problems.
@@ -212,7 +212,7 @@ const LandingPage: React.FC = () => {
               <img 
                 src={mentorImage}
                 alt="Shivam Yadav, Mentor at Career Redefine"
-                className="rounded-full w-80 h-80 mx-auto sm:w-96 sm:h-96 lg:w-full lg:h-auto lg:rounded-2xl shadow-2xl shadow-blue-500/10 border-4 border-slate-700"
+                className="rounded-2xl w-full h-auto mx-auto sm:w-96 lg:w-full shadow-2xl shadow-blue-500/10 border-4 border-slate-700"
               />
             </motion.div>
             <motion.div
